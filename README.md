@@ -13,7 +13,7 @@ First, run the install:
 npm install
 ```
 
-# Adding the envv credentials
+# Adding the env credentials
 
 ```
 DATABASE_URL= Database URL
