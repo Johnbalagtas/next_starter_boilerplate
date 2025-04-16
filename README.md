@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next Starter kit
+[![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)]()
+[![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)]()
+[![TS Node](https://img.shields.io/badge/ts--node-3178C6?style=for-the-badge&logo=ts-node&logoColor=white)]()
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)]()
+[![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)]()
 
-## Getting Started
 
-First, run the development server:
+# Getting Started
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+First, run the install:
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Adding the envv credentials
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+DATABASE_URL= Database URL
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+BETTER_AUTH_SECRET= Better auth Secret
+BETTER_AUTH_URL= Base URL of your App
+```
 
-## Learn More
+```
+GOOGLE_CLIENT_ID= Google Client ID
+GOOGLE_CLIENT_SECRET= Google Client Secret
+```
 
-To learn more about Next.js, take a look at the following resources:
+```
+GITHUB_CLIENT_ID= Github Client ID
+GITHUB_CLIENT_SECRET= Github Client Secret
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+RESEND_API_KEY= Resend API KEY
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Access the application in your localhost at `http://localhost:3000`
 
-## Deploy on Vercel
+# Starting the application
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Now if we have done everything just run the application:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+npm run dev
+```
+
+
+# Author
+-   [@johnbalagtas](https://github.com/Johnbalagtas)
+
+
+# Framework / Libraries
+This project uses the following frameworks and libraries:
+
+ - [⚛️ React](https://react.dev/) - a free and open-source front-end JavaScript library for building user interfaces based on UI components.
+ - [🎨 Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework that provides a set of pre-designed utility classes to quickly build user interfaces.
+ - [📚 Typescript](https://www.typescriptlang.org/) - A strongly-typed superset of JavaScript that adds static typing and other features to the language.
+ - [🖥️ Shadcn](https://ui.shadcn.com/) - A component library for making a beautiful UI
+
+
+
+
