@@ -40,7 +40,7 @@ RESEND_API_KEY= Resend API KEY
 
 Access the application in your localhost at `http://localhost:3000`
 
-# Starting the application
+# Start the application
 
 Now if we have done everything just run the application:
 
