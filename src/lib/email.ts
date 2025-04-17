@@ -13,7 +13,7 @@ export async function sendMagicLinkEmail({
 }: SendMagicLinkEmailProps) {
   try {
     const { data, error } = await resend.emails.send({
-      from: "Magic Link <onboarding@resend.dev>",
+      from: "Your App <login@yourdomain.com>",
       to: email,
       subject: "Your Magic Link",
       html: `
@@ -26,7 +26,7 @@ export async function sendMagicLinkEmail({
                 <p>Or copy and paste this link into your browser:</p>
                 <p style="word-break: break-all;">${url}</p>
                 <p style="color: #6B7280; font-size: 14px; margin-top: 24px;">
-                  This link will expire in 5 minutes. If you didn't request this email, you can safely ignore it.
+                  This link will expire in 10 minutes. If you didn't request this email, you can safely ignore it.
                 </p>
               </div>
             `,

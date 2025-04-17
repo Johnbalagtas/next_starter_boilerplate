@@ -9,7 +9,14 @@ import { nextCookies } from "better-auth/next-js";
 export const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
-    autoSignIn: false
+    autoSignIn: false,
+
+    passwordStrength: {
+      minLength: 6,
+      requireNumbers: true,
+      requireSpecialCharacters: true,
+      requireUppercase: true,
+    },
   },
   socialProviders: {
     google: {
@@ -21,6 +28,10 @@ export const auth = betterAuth({
       clientSecret: process.env.GITHUB_CLIENT_SECRET || "",
     },
   },
+  session: {
+    expiresIn: 60 * 60 * 24 * 7, // 7 days
+    updateAge: 60 * 60 * 24, // 1 day (every 1 day the session expiration is updated)
+  },
   database: drizzleAdapter(db, {
     provider: "pg",
     schema: schema,
@@ -28,14 +39,16 @@ export const auth = betterAuth({
   plugins: [
     nextCookies(),
     magicLink({
-      sendMagicLink: async ({ email, url }) => {
+      sendMagicLink: async ({ email, token }) => {
         try {
-          await sendMagicLinkEmail({ email, url });
+          const customUrl = `https://yourapp.com/auth/callback?token=${token}`
+          await sendMagicLinkEmail({ email, url: customUrl });
         } catch (error) {
           console.error("Error sending magic link email:", error);
           throw new Error("Failed to send magic link email");
         }
       },
+      expiresIn: 10 * 60, // 10 minutes
     }),
   ],
 });
